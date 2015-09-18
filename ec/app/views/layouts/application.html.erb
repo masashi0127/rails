@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ec</title>
+  <link rel="stylesheet" href="/assets/min/<%= controller.controller_name %>.css">
+  <link rel="stylesheet" href="/assets/min/c3.css">
+  <%= yield :vendor_script %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+<%= javascript_include_tag controller.controller_name %>
+
+</body>
+</html>

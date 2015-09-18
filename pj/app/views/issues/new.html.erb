@@ -1,0 +1,9 @@
+<%= form_for @issue do |f| %>
+  <ul style="list-style: none;">
+  <li><%= f.label :title %><%= f.text_field :title %></li>
+  <li><%= f.label :body %><%= f.text_area :body %></li>
+  <li><%= f.label :start_datetime %><%= f.datetime_field :start_datetime %></li>
+  <li><%= f.label :end_datetime %><%= f.datetime_field :end_datetime %></li>
+  <li><%= f.submit %></li>
+  </ul>
+<% end %>

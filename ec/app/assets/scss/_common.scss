@@ -1,0 +1,115 @@
+@import "bourbon";
+@import "neat";
+
+$base-high-light-color: #DBF1FB;
+$base-low-light-color: #A7D6ED;
+$base-color: #79BAD9;
+$base-low-dark-color: #529BBF;
+$base-high-dark-color: #327CA0;
+
+$second-high-light-color: #FFF6DD;
+$second-low-light-color: #FFE9B0;
+$second-color: #FFDE88;
+$second-low-dark-color: #FFD566;
+$second-high-dark-color: #FECB47;
+
+$third-high-light-color: #FFE4DD;
+$third-low-light-color: #FFC0B0;
+$third-color: #FFA188;
+$third-low-dark-color: #FF8666;
+$third-high-dark-color: #FE6D47;
+
+$base-black: #333;
+$base-white: #FEFEFE;
+$base-gray: #ddd;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, 'Helvetica neue', Helvetica, '游ゴシック', YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.body {
+}
+
+.content {
+  @include span-columns(11);
+  @include shift(0.5);
+}
+
+.main-title {
+  font-size: 3rem;
+  padding: 10px 0;
+}
+
+.outer {
+}
+
+@mixin section-title($font-size: 2rem) {
+  font-size: $font-size;
+  padding: 5px;
+}
+
+@mixin section($span: 4) {
+  @include span-columns($span);
+  @include omega(3n);
+  margin-top: 20px;
+}
+
+@mixin section-outer($radius: 4px) {
+  @include border-top-radius($radius);
+  @include border-bottom-radius($radius);
+  box-sizing: border-box;
+  border: 1px solid $base-gray;
+  height: 300px;
+  padding: 5px;
+}
+
+@mixin input-text() {
+  border: 1px solid $base-gray;
+  padding: 5px;
+  font-size: 1.6em;
+  @include border-top-radius(4px);
+  @include border-bottom-radius(4px);
+}
+
+@mixin input-select() {
+  border: 1px solid $base-gray;
+  padding: 5px;
+  font-size: 1.6em;
+  @include border-top-radius(4px);
+  @include border-bottom-radius(4px);
+}
+
+@mixin base-button {
+  overflow: hidden;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  color: $base-high-dark-color;
+  padding: 5px 10px;
+  font-size: 1.6rem;
+  background-color: $base-high-light-color;
+
+  &:hover {
+    background-color: $base-low-light-color;
+  }
+
+  &:active {
+    background-color: $base-low-dark-color;
+    color: $base-high-light-color;
+  }
+}
+
+.pagination {
+  font-size: 1.6rem;
+  text-align: right;
+
+  .first {
+
+  }
+}

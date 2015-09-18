@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tascare</title>
+  <link rel="stylesheet" href="/assets/min/<%= controller.controller_name %>.css">
+  <%= yield :vendor_script %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+<%= javascript_include_tag controller.controller_name %>
+
+</body>
+</html>

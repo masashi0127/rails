@@ -1,0 +1,43 @@
+<header class="header">
+  <nav class="header__nav">
+    <ul class="nav__list">
+      <li class="nav__item"><%= link_to "ダッシュボード", dashboards_path, class: "nav__link" %></li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">受注管理</a>
+        <ul class="nav__sub-list">
+          <li class="nav__sub-item"><%= link_to "受注検索", orders_path, class: "nav__sub-link" %></li>
+          <li class="nav__sub-item"><a href="#" class="nav__sub-link">Orders Analytics</a></li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Sales</a>
+        <ul class="nav__sub-list">
+          <li class="nav__sub-item"><a href="#" class="nav__sub-link">Sales Search</a></li>
+          <li class="nav__sub-item"><a href="#" class="nav__sub-link">Sales Analytics</a></li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Items</a>
+        <ul class="nav__sub-list">
+          <li class="nav__sub-item"><a href="#" class="nav__sub-link">Items Search</a></li>
+          <li class="nav__sub-item"><a href="#" class="nav__sub-link">Items Create</a></li>
+          <li class="nav__sub-item"><a href="#" class="nav__sub-link">Items Analytics</a></li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Consumers</a>
+        <ul class="nav__sub-list">
+          <li class="nav__sub-item"><a href="#" class="nav__sub-link">Consumers Search</a></li>
+          <li class="nav__sub-item"><a href="#" class="nav__sub-link">Consumers Analytics</a></li>
+        </ul>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Settings</a>
+        <ul class="nav__sub-list">
+          <li class="nav__sub-item"><a href="#" class="nav__sub-link">Base Settings</a></li>
+          <li class="nav__sub-item"><a href="#" class="nav__sub-link">Site Settings</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>

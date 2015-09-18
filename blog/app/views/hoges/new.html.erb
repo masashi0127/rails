@@ -1,0 +1,5 @@
+<%= form_for @hoge, html: {class: "aiueo"} do |f| %>
+    <%= f.label :name %>:<%= f.text_field :name, class: "abcd" %>
+    <%= f.label :abcd %>:<%= f.text_field :name, name: "hoge[abcd]" %>
+    <%= f.submit %>
+<% end %>

@@ -1,0 +1,117 @@
+@import "common";
+@import "navi";
+
+.my-task-list__outer {
+  @include span-columns(8);
+
+  .task-list__title {
+    margin-top: 10px;
+  }
+
+  .my-task-list__group {
+    margin-top: 10px;
+    border-top: 1px solid $base-black;
+    border-bottom: 1px solid $base-black;
+
+    .my-task-list__item {
+      list-style-type: none;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $base-gray;
+      }
+
+      .item__title {
+        font-size: $gold-rate * 1rem;
+        font-weight: bold;
+
+        .title__link {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .item__info {
+        font-size: $gold-rate * 0.8rem;
+
+        .info__link {
+          font-weight: bold;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .item__more {
+        padding: 10px 0;
+        text-align: center;
+
+        .more__link {
+          font-size: $gold-rate * 1rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.task-list__outer {
+  @include span-columns(4);
+
+  .task-list__title {
+    margin-top: 10px;
+  }
+
+  .task-list__group {
+    margin: 10px 0 50px 0;
+    border-top: 1px solid $base-black;
+    border-bottom: 1px solid $base-black;
+
+    .task-list__item {
+      list-style-type: none;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $base-gray;
+      }
+
+      .item__title {
+        font-size: $gold-rate * 1rem;
+        font-weight: bold;
+
+        .title__link {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .item__info {
+        font-size: $gold-rate * 0.8rem;
+
+        .info__link {
+          font-weight: bold;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .item__more {
+        padding: 5px 0;
+        text-align: right;
+
+        .more__link {
+          font-size: $gold-rate * 0.8rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

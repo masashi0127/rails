@@ -1,0 +1,72 @@
+<% content_for :vendor_script do %>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+<% end %>
+
+<%= render 'layouts/navi' %>
+
+<div class="content">
+  <h1 class="main-title">Dashboards</h1>
+  <div class="outer">
+    <section class="order__section">
+      <h2 class="section__sub-title">Order Price</h2>
+      <div class="section__outer">
+        <div class="outer__group">
+          <ul class="group__list">
+            <li class="list__label">Monthly</li>
+            <li class="list__value">$1,000,000</li>
+            <li class="list__label">Daily</li>
+            <li class="list__value">$300,000</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="order-transition__section">
+      <h2 class="section__sub-title">Order Trabsition</h2>
+      <div class="section__outer">
+        <div id="OrderTransition"></div>
+      </div>
+    </section>
+    <section class="order-list__section">
+      <h2 class="section__sub-title">Order List</h2>
+      <div class="section__outer">
+        <table class="order-list__table">
+          <tbody>
+          <% (1..20).each do |ii| %>
+          <tr class="table__row">
+            <td class="row__item"><%= image_tag 'ruby-logo.png', {class: 'item__image'}%></td>
+            <td class="row__item">Yamada Tarou</td>
+            <td class="row__item">2015-01-01 00:00:00</td>
+          </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="achievement-rate__section">
+      <h2 class="section__sub-title">Achievement Rate</h2>
+      <div class="section__outer">
+        <div class="outer__group">
+          <ul class="group__list">
+            <li class="list__label">Monthly</li>
+            <li class="list__value">91.5%</li>
+            <li class="list__label">Daily</li>
+            <li class="list__value">67.8%</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="category-order__section">
+      <h2 class="section__sub-title">Category Order</h2>
+      <div class="section__outer">
+        <div id="CategoryOrderChart"></div>
+      </div>
+    </section>
+    <section class="customer-rank__section">
+      <h2 class="section__sub-title">Customer Rank</h2>
+      <div class="section__outer">
+        <div id="CustomerRankChart"></div>
+      </div>
+    </section>
+  </div>
+</div>

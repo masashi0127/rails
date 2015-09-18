@@ -1,0 +1,36 @@
+.header {
+  @include span-columns(12);
+  font-size: $gold-rate * 1rem;
+  border-bottom: 1px solid $base-black;
+  line-height: 50px;
+}
+
+.header__nav {
+  @include span-columns(10);
+  @include shift(1);
+}
+
+.nav__list {
+  @include span-columns(12);
+  letter-spacing: -.40em;
+  text-align: justify;
+  text-justify: distribute-all-lines;
+}
+
+.nav__item {
+  width: 12%;
+  @include display(inline-block);
+  letter-spacing: normal;
+  text-align: center;
+  position: relative;
+}
+
+.nav__link {
+  @include display(block);
+
+  &:hover {
+    & + .nav__sub-list {
+      @include display(block);
+    }
+  }
+}

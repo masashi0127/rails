@@ -1,0 +1,40 @@
+<%= link_to "Create", new_issue_path %>
+<%= form_for :issue, url: {controller: "issues", action: "search"} do |f| %>
+<table>
+  <tr>
+    <th>title</th>
+    <th>body</th>
+    <th>status</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><%= f.search_field :title %></td>
+    <td><%= f.search_field :body %></td>
+    <td><%= f.select(:status, options_for_select([['incompatible', 0], ['under', 1], ['confirming', 2], ['complete', 3]])) %></td>
+    <td><%= f.submit %></td>
+  </tr>
+</table>
+<% end %>
+
+<table>
+  <tr>
+    <th>title</th>
+    <th>body</th>
+    <th>status</th>
+    <th>start_datetime</th>
+    <th>end_datetime</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @issues.each do |issue| %>
+  <tr>
+    <td><%= issue.title %></td>
+    <td><%= issue.body %></td>
+    <td><%= issue.status %></td>
+    <td><%= issue.start_datetime %></td>
+    <td><%= issue.end_datetime %></td>
+    <td><%= link_to "Edit", edit_issue_path(issue) %></td>
+    <td><%= link_to "Destroy", issue_path(issue), method: :delete, data: {confirm: "Are you sure? "} %></td>
+  </tr>
+  <% end %>
+</table>

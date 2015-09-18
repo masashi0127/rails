@@ -1,0 +1,41 @@
+@import "common";
+
+.login-form {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 320px;
+  height: 320px;
+  text-align: center;
+  @include border-top-radius(6px);
+  @include border-bottom-radius(6px);
+}
+
+.login-form__text,
+.login-form__submit {
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 1erm;
+  @include border-top-radius(4px);
+  @include border-bottom-radius(4px);
+  @include display(block);
+  @include span-columns(10);
+  @include shift(1);
+  border: 1px solid $base-gray;
+}
+
+.login-form__submit {
+  background-color: $base-white;
+
+  &:hover {
+
+  }
+
+  &:active, &:focus {
+    outline:none;
+  }
+}

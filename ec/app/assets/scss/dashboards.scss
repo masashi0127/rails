@@ -1,0 +1,72 @@
+@import "common";
+@import "navi";
+
+.order__section,
+.order-transition__section,
+.order-list__section,
+.achievement-rate__section,
+.category-order__section,
+.customer-rank__section {
+  @include section();
+
+  .section__sub-title {
+    @include section-title();
+  }
+
+  .section__outer {
+    @include section-outer();
+    position: relative;
+
+    .outer__group {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      .order__now-price {
+        position: absolute;
+        font-size: 5rem;
+        @include transform(translate(-50%, -50%));
+      }
+
+      .order__pre-price {
+        position: relative;
+        font-size: 3rem;
+        @include transform(translate(-50%, 100%));
+        color: $base-gray;
+      }
+
+      .group__list {
+        list-style: none;
+        position: absolute;
+        @include transform(translate(-50%, -50%));
+
+        .list__label {
+          font-size: 2rem;
+        }
+
+        .list__value {
+          font-size: 4rem;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.order-list__section {
+  .section__outer {
+    @include section-outer;
+    overflow-y: scroll;
+
+    .order-list__table {
+      .table__row {
+        .row__item {
+          width: 35%;
+          .item__image {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}

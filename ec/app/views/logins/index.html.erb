@@ -1,0 +1,8 @@
+<div class="content">
+<%= form_for :login, html: {class: 'login-form'} do |f| %>
+  <%= image_tag 'ruby-logo.png', {class: 'login-form__logo'}%>
+  <%= f.text_field :username, class: 'login-form__text', placeholder: 'Enter Your name' %>
+  <%= f.password_field :password, class: 'login-form__text', placeholder: 'Password' %>
+  <%= f.submit class: 'login-form__submit', value: 'Login' %>
+<% end %>
+</div>

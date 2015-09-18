@@ -1,0 +1,68 @@
+@import "common";
+@import "navi";
+
+.search__section {
+  @include section(3);
+
+  .search__condition-list {
+    list-style: none;
+
+    .condition-list__label-item {
+      margin-top: 10px;
+
+      .item__label {
+        font-size: 2rem;
+      }
+    }
+
+    .condition-list__input-item {
+
+      .item__input-text {
+        @include input-text();
+      }
+
+      .item__input-select {
+        @include input-select();
+      }
+
+      .item__submit-button {
+        margin-top: 20px;
+        @include base-button;
+      }
+    }
+  }
+}
+
+.list__section {
+  @include section(9);
+
+  .list__paginate-message {
+    font-size: 1.6rem;
+    text-align: right;
+  }
+
+  .section__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    .table-head__row {
+      border-bottom: 3px solid $base-high-light-color;
+      .table__head-item {
+        font-size: 2.6rem;
+      }
+    }
+
+    .table-body__row {
+      border-bottom: 1px solid $base-high-light-color;
+
+      .table-body__value {
+        padding: 20px 0;
+        font-size: 1.6rem;
+      }
+
+      .table-body__base-button {
+        @include base-button;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "bourbon";
+@import "neat";
+
+$base-white: #FEFEFE;
+$base-gray: #ddd;
+$base-black: #333;
+
+$gold-rate: 1.618;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, 'Helvetica neue', Helvetica, '游ゴシック', YuGothic, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+  background-color: $base-white;
+  color: $base-black;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+}
+
+h1 {
+  font-size: $gold-rate * 3 * 1rem;
+}
+
+h2 {
+  font-size: $gold-rate * 2.5 * 1rem;
+}
+
+h3 {
+  font-size: $gold-rate * 2 * 1rem;
+}
+
+h4 {
+  font-size: $gold-rate * 1.5 * 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  @include span-columns(10);
+  @include shift(1);
+}

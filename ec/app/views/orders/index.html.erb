@@ -1,0 +1,60 @@
+<%= render 'layouts/navi' %>
+
+<div class="content">
+  <h1 class="main-title">受注検索</h1>
+  <div class="outer">
+    <section class="search__section">
+      <%= form_for :order, url: orders_path do |f| %>
+      <ul class="search__condition-list">
+        <li class="condition-list__label-item"><label class="item__label">キーワード</label></li>
+        <li class="condition-list__input-item"><%= f.text_field :keyword, class: "item__input-text" %></li>
+        <li class="condition-list__label-item"><label class="item__label">都道府県</label></li>
+        <li class="condition-list__input-item"><%= f.select(:prefecture_id, @prefectures.collect {|p| [ p.name, p.id ] }, {}, {class: "item__input-select"}) %></li>
+        <li class="condition-list__label-item"><label class="item__label">ステータス</label></li>
+        <li class="condition-list__input-item"><%= f.select(:prefecture_id, @orderStatuses.collect {|p| [ p.name, p.id ] }, {}, {class: "item__input-select"}) %></li>
+        <li class="condition-list__label-item"><label class="item__label">受注日</label></li>
+        <li class="condition-list__input-item">
+          <%= f.date_select :created_at, {use_month_numbers: true, end_year: Date.today.year}, class: "item__input-select", prefix: :start_date %>
+          ~
+          <%= f.date_select :created_at, {use_month_numbers: true, end_year: Date.today.year}, class: "item__input-select" %>
+        </li>
+        <li class="condition-list__input-item"><%= f.submit value: "検索", class: "item__submit-button" %></li>
+      </ul>
+      <% end %>
+    </section>
+    <section class="list__section">
+      <p class="list__paginate-message"><%= @orders.total_count %>&nbsp;件&nbsp;ヒット</p>
+      <%= paginate @orders %>
+      <table class="section__table">
+        <thead>
+          <tr class="table-head__row">
+            <th class="table__head-item" width="15%">顧客名</th>
+            <th class="table__head-item" width="10%">配送先</th>
+            <th class="table__head-item" width="15%">ステータス</th>
+            <th class="table__head-item" width="20%">注文商品</th>
+            <th class="table__head-item" width="20%">注文日</th>
+            <th class="table__head-item" width="20%"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @orders.each do |order| %>
+          <tr class="table-body__row">
+            <td class="table-body__value"><%= order.customer.name %></td>
+            <td class="table-body__value"><%= order.delivery_address.prefecture.name %></td>
+            <td class="table-body__value"><%= order.order_status.name %></td>
+            <td class="table-body__value">
+              <% order.items.each do |item| %>
+              <%= item.name %>
+              <% end %>
+            </td>
+            <td class="table-body__value">2015-01-01</td>
+            <td class="table-body__value"><button class="table-body__base-button">詳細</button></td>
+          </tr>
+          <% end %>
+        </tbody>
+
+      </table>
+      <%= paginate @orders %>
+    </section>
+  </div>
+</div>
