@@ -3,6 +3,7 @@
 <head>
   <title>Tascare</title>
   <link rel="stylesheet" href="/assets/min/<%= controller.controller_name %>.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <%= yield :vendor_script %>
   <%= csrf_meta_tags %>
 </head>
@@ -10,7 +11,7 @@
 
 <%= yield %>
 
-<%= javascript_include_tag controller.controller_name %>
+<%= javascript_include_tag "min/#{controller.controller_name}" %>
 
 </body>
 </html>

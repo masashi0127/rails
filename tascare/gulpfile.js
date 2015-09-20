@@ -16,7 +16,7 @@ var paths = {
   scss: 'app/assets/scss/',
   css_org: 'app/assets/stylesheets/org/',
   css_min: 'app/assets/stylesheets/min/',
-  js_org: 'app/assets/javascripts/org/',
+  js_org: 'app/assets/javascripts/',
   js_bro: 'app/assets/javascripts/bro/',
   js_min: 'app/assets/javascripts/min/'
 }

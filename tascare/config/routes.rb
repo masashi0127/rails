@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "logins" => "logins#index"
   post "logins" => "logins#login"
   get "tops" => "tops#index"
+  get "projects" => "projects#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
