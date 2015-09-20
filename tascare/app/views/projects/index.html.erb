@@ -13,7 +13,7 @@
       <% 1..10.times do |i| %>
       <li class="task-list__item" draggable="true">
         <p class="item__info">2015/01/01&nbsp;<a href="javascript:void(0);" class="info__link">山田太郎</a>さんがタスクを登録しました。</p>
-        <p class="item__title"><a href="javascript:void(0);" class="title__link">タイトル<%= i %></a></p>
+        <p class="item__title"><a href="javascript:void(0);" class="title__link"><%= title %>タイトル<%= i %></a></p>
       </li>
       <% end %>
     </ul>
