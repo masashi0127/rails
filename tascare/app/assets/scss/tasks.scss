@@ -1,3 +1,110 @@
-// Place all the styles related to the tasks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "common";
+@import "navi";
+
+.task__outer {
+  @include span-columns(12);
+
+  .task__content {
+    font-size: $gold-rate * 1rem;
+  }
+
+  .task__members,
+  .task__project {
+    font-size: $gold-rate * 0.8rem;
+  }
+}
+
+.comment__outer {
+  @include span-columns(12);
+  margin-bottom: 50px;
+
+  .comment__title {
+    margin-top: 10px;
+  }
+
+  .comment__list {
+    list-style-type: none;
+    position: relative;
+
+    &:before {
+      content: ' ';
+      width: 3px;
+      background-color: $base-gray;
+      margin-left: 50px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+
+    .list__item {
+      letter-spacing: -.40em;
+
+      .item__user-image-wrap {
+        @include display(inline-block);
+        letter-spacing: normal;
+        width: 10%;
+        text-align: center;
+
+        .item__user-image {
+          position: relative;
+          border: 1px solid $base-gray;
+          @include border-top-radius(40px);
+          @include border-bottom-radius(40px);
+          box-sizing: border-box;
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      .item__text {
+        @include display(inline-block);
+        letter-spacing: normal;
+        border: 1px solid $base-gray;
+        width: 90%;
+        vertical-align: top;
+        @include border-top-radius(4px);
+        @include border-bottom-radius(4px);
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: $gold-rate * 0.8rem;
+      }
+    }
+  }
+
+  .comment__textarea-form {
+    border-top: 3px solid $base-gray;
+    letter-spacing: -.40em;
+    padding-top: 20px;
+
+    .form__user-image-wrap {
+      @include display(inline-block);
+      width: 10%;
+      text-align: center;
+      letter-spacing: normal;
+
+      .form__user-image {
+        border: 1px solid $base-gray;
+        @include border-top-radius(40px);
+        @include border-bottom-radius(40px);
+        box-sizing: border-box;
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .form__textarea {
+      @include textarea;
+      @include display(inline-block);
+      letter-spacing: normal;
+      width: 90%;
+      vertical-align: top;
+      margin-bottom: 20px;
+    }
+
+    .form__submit {
+      @include shift(11);
+      @include span-columns(1);
+      @include base-button;
+    }
+  }
+}

@@ -18,14 +18,13 @@ $(function() {
   }
 
   function handleDragLeave(e) {
-    $(this).prev('.dragging').remove();
   }
 
   function handleDragEnd(e) {
     $draggingElement.insertAfter($positionElement);
   }
 
-  var items = document.querySelectorAll('.task-list__item');
+  var items = document.querySelectorAll('.list__item');
   [].forEach.call(items, function(item) {
     item.addEventListener('dragstart', handleDragStart, false);
     item.addEventListener('dragenter', handleDragEnter, false);

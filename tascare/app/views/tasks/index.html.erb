@@ -1,0 +1,28 @@
+<%= render 'layouts/navi' %>
+
+<div class="content">
+  <section class="task__outer">
+    <h1>タスク名</h1>
+    <p class="task__content">タスク概要を表示します。</p>
+    <p class="task__members"><span><a href="/users">山田</a></span>&nbsp;<span><a href="/users">木村</a></span>&nbsp;<span><a href="/users">田中</a></span><p>
+    <p class="task__project"><a href="/projects">プロジェクト名</a><p>
+  </section>
+  <section class="comment__outer">
+    <h3 class="comment__title">コメント</h3>
+    <ul class="comment__list">
+      <% 1..10.times do |i| %>
+      <li class="list__item">
+        <div class="item__user-image-wrap">
+          <img class="item__user-image" src="http://www.earthrunclub.net/kawasaki/img/2020logo2.jpg"></img>
+        </div>
+        <div class="item__text">コメント内容が表示されます。</br>コメント内容が表示されます。</div>
+      </li>
+      <% end %>
+    </ul>
+    <form class="comment__textarea-form">
+      <div class="form__user-image-wrap"><img class="form__user-image" src="http://www.earthrunclub.net/kawasaki/img/2020logo2.jpg"></img></div>
+      <textarea class="form__textarea" rows="7"></textarea>
+      <input type="submit" class="form__submit" value="登録">
+    </form>
+  </section>
+</div>
