@@ -81,15 +81,13 @@ a {
   padding: 5px 10px;
   font-size: $gold-rate * 1rem;
   text-align: center;
+  @include display(inline-block);
   @include border-top-radius(4px);
   @include border-bottom-radius(4px);
+  @include appearance(none);
 
   &:hover {
     font-weight: bold;
-
-    &:active {
-      font-weight: normal;
-      border: 2px solid $base-black;
-    }
+    text-decoration: none;
   }
 }

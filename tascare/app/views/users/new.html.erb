@@ -1,0 +1,25 @@
+<%= render 'layouts/navi' %>
+
+<div class="content">
+  <h3 class="user__name">ユーザー作成</h3>
+  <form class="user__edit-form">
+    <ul class="edit-form__list">
+      <li class="edit-form__item">
+        <label class="item__label">アカウント</label>
+        <input class="item__input-text" type="text">
+      </li>
+      <li class="edit-form__item">
+        <label class="item__label">パスワード</label>
+        <input class="item__input-text" type="password">
+      </li>
+      <li class="edit-form__item">
+        <label class="item__label">画像</label>
+        <input type="file">
+      </li>
+      <li class="edit-form__item">
+        <input type="submit" value="登録" class=" item__submit">
+        <a href="/users" class="item__back-button">戻る</a>
+      </li>
+    </ul>
+  </form>
+</div>

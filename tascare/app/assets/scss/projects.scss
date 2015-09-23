@@ -106,6 +106,16 @@
         @include select;
         @include span-columns(10);
       }
+
+      .item__submit {
+        @include base-button;
+        @include shift(2);
+      }
+
+      .item__back-button {
+        @include base-button;
+
+      }
     }
   }
 }
