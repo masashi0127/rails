@@ -2,6 +2,9 @@
   <nav class="header__nav">
     <ul class="nav__list">
       <li class="nav__item"><%= link_to "Tascare", tops_path, class: "nav__link" %></li>
+      <% if controller.controller_name != "tops" %>
+      <li class="nav__item"><a href="/<%= controller.controller_name %>/new">作成</a></li>
+      <% end %>
     </ul>
   </nav>
 </header>

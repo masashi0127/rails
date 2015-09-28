@@ -1,0 +1,121 @@
+@import "common";
+@import "navi";
+
+.project__outer {
+  @include span-columns(12);
+
+  .project__header {
+    @include span-columns(12);
+
+    .project__name {
+      @include span-columns(11);
+    }
+
+    .project__edit-button {
+      @include span-columns(1);
+      @include base-button;
+    }
+  }
+
+  .project__content {
+    font-size: $gold-rate * 1rem;
+  }
+
+  .project__members {
+    font-size: $gold-rate * 0.8rem;
+  }
+}
+
+.project-task__outer {
+  @include span-columns(12);
+  margin-bottom: 50px;
+
+  .project-task__list {
+    @include span-columns(4);
+    border-bottom: 1px solid $base-black;
+
+    .list__title {
+      margin-top: 10px;
+    }
+
+    .list__item {
+      list-style-type: none;
+      cursor: move;
+
+      &:first-of-type {
+        border-top: 1px solid $base-black;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $base-gray;
+      }
+
+      .item__title {
+        font-size: $gold-rate * 1rem;
+        font-weight: bold;
+      }
+
+      .item__info {
+        font-size: $gold-rate * 0.8rem;
+
+        .info__link {
+          font-weight: bold;
+        }
+      }
+
+      .item__more {
+        padding: 5px 0;
+        text-align: right;
+
+        .more__link {
+          font-size: $gold-rate * 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+.project__edit-form {
+  @include span-columns(8);
+  @include shift(2);
+
+  .edit-form__list {
+    list-style: none;
+
+    .edit-form__item {
+      @include span-columns(12);
+      margin-bottom: 10px;
+
+      .item__label {
+        @include span-columns(2);
+        font-size: $gold-rate * 1rem;
+        font-weight: bold;
+      }
+
+      .item__input-text {
+        @include input-text;
+        @include span-columns(10);
+      }
+
+      .item__textarea {
+        @include textarea;
+        @include span-columns(10);
+      }
+
+      .item__select {
+        @include select;
+        @include span-columns(10);
+      }
+
+      .item__submit {
+        @include base-button;
+        @include shift(2);
+      }
+
+      .item__back-button {
+        @include base-button;
+
+      }
+    }
+  }
+}

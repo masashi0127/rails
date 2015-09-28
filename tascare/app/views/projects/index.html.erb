@@ -1,0 +1,25 @@
+<%= render 'layouts/navi' %>
+
+<div class="content">
+  <section class="project__outer">
+    <div class="project__header">
+      <h1 class="project__name">プロジェクト名</h1>
+      <a class="project__edit-button" href="/projects/1/edit">編集</a>
+    </div>
+    <p class="project__content">プロジェクト概要を表示します。</p>
+    <p class="project__members"><span><a href="/users">山田</a></span>&nbsp;<span><a href="/users">木村</a></span>&nbsp;<span><a href="/users">田中</a></span><p>
+  </section>
+  <section class="project-task__outer">
+    <% ["未対応", "作業中", "完了"].each do |title| %>
+    <ul class="project-task__list">
+      <h3 class="list__title"><%= title %></h3>
+      <% 1..10.times do |i| %>
+      <li class="list__item" draggable="true">
+        <p class="item__info">2015/01/01&nbsp;<a href="/users" class="info__link">山田太郎</a>さんがタスクを登録しました。</p>
+        <p class="item__title"><a href="/tasks" class="title__link"><%= title %>タイトル<%= i %></a></p>
+      </li>
+      <% end %>
+    </ul>
+    <% end %>
+  </section>
+</div>

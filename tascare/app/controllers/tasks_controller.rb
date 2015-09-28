@@ -1,4 +1,4 @@
-class ProjectsController < ApplicationController
+class TasksController < ApplicationController
   def index
   end
 
@@ -7,4 +7,5 @@ class ProjectsController < ApplicationController
 
   def edit
   end
+
 end

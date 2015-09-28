@@ -1,0 +1,37 @@
+<%= render 'layouts/navi' %>
+
+<div class="content">
+  <h3 class="task__name">タスク編集</h3>
+  <form class="task__edit-form">
+    <ul class="edit-form__list">
+      <li class="edit-form__item">
+        <label class="item__label">タイトル</label>
+        <input class="item__input-text" type="text">
+      </li>
+      <li class="edit-form__item">
+        <label class="item__label">概要</label>
+        <textarea class="item__textarea" rows="7"></textarea>
+      </li>
+      <li class="edit-form__item">
+        <label class="item__label">メンバー</label>
+        <select class="item__select">
+          <option>メンバーA</option>
+          <option>メンバーB</option>
+          <option>メンバーC</option>
+        </select>
+      </li>
+      <li class="edit-form__item">
+        <label class="item__label">プロジェクト</label>
+        <select class="item__select">
+          <option>プロジェクトA</option>
+          <option>プロジェクトB</option>
+          <option>プロジェクトC</option>
+        </select>
+      </li>
+      <li class="edit-form__item">
+        <input type="submit" value="登録" class=" item__submit">
+        <a href="/tasks" class="item__back-button">戻る</a>
+      </li>
+    </ul>
+  </form>
+</div>

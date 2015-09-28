@@ -4,7 +4,7 @@
 .my-task-list__outer {
   @include span-columns(8);
 
-  .task-list__title {
+  .my-task-list__title {
     margin-top: 10px;
   }
 
